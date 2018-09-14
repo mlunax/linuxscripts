@@ -22,7 +22,7 @@ apt install -y git wget curl sudo
 
 #Install zsh
 if ( [ "$zshtheme" != "0" ]  && [ -n "$zshtheme" ] ); then
-	apt install -y zsh fonts-powerline
+	apt install -y zsh
 	curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 	sed -i "s/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"$zshtheme\"/g" ~/.zshrc
 	source ~/.zshrc
