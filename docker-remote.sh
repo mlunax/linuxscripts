@@ -28,8 +28,7 @@ rm -v client.csr server.csr
 cp -f ca.pem server-cert.pem server-key.pem /etc/docker/
 
 mkdir -p /etc/systemd/system/docker.service.d/
-echo '
-# /etc/systemd/system/docker.service.d/override.conf
+echo '# /etc/systemd/system/docker.service.d/override.conf
 [Service]
 ExecStart=
 ExecStart=/usr/bin/dockerd --tlsverify --tlscacert=/etc/docker/ca.pem --tlscert=/etc/docker/server-cert.pem --tlskey=/etc/docker/server-key.pem -H fd:// -H tcp://0.0.0.0:2376' > /etc/systemd/system/docker.service.d/startup_options.conf
