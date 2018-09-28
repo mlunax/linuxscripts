@@ -1,6 +1,6 @@
 # setup
 export HOST=domain
-IP="0.0.0.0"
+export IP=0.0.0.0
 
 mkdir certs
 cd certs
@@ -25,7 +25,7 @@ openssl x509 -req -days 365 -sha256 -in client.csr -CA ca.pem -CAkey ca-key.pem 
 # cleanup
 rm -v client.csr server.csr
 
-cp ca.pem server-cert.pem server-key.pem /etc/docker/
+cp -f ca.pem server-cert.pem server-key.pem /etc/docker/
 
 mkdir -p /etc/systemd/system/docker.service.d/
 echo '
