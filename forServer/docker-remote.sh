@@ -1,3 +1,4 @@
+#!/bin/bash
 # setup
 export HOST=domain
 export IP=0.0.0.0

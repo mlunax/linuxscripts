@@ -1,3 +1,4 @@
+#!/bin/bash
 #Debian Cinnamon Gnome Alsa and PulseAudio
 pactl set-card-profile alsa_card.pci-0000_00_1b.0 output:analog-stereo
 sleep 0.1
