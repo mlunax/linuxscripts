@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#checking distro
-#apt install lsb-core
-#if [ $(lsb_release -is) !=  "Debian" ]; then echo "Script only for Debian"; fi
 echo "Script only for Debian. Terminate when not debian"
 if [ $(id -u) != "0" ]; then echo "Only root"; fi
 
