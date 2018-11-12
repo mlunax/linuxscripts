@@ -13,6 +13,9 @@ fi
 if [ $1 == "wget" ]; then
     wget -i $2
     exit
+elif [ $1 == "yt-dl" ] || [ $1 == "youtube-dl" ]; then
+    youtube-dl -f best $(cat $2)
+    exit
 else
     $1 $(cat $2)
     exit
