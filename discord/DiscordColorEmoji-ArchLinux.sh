@@ -1,4 +1,6 @@
 #!/bin/bash
+#thx SohamG for fontconfig.conf
+#SohamG's Github: https://github.com/SohamG
 sudo pacman -S noto-fonts-emoji
 [ -f ~/.config/fontconfig/ ] || mkdir ~/.config/fontconfig/
 if [ -f ~/.config/fontconfig/fonts.conf ]; then
